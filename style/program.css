@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Manrope;
+    color:#FFFFFF;
+}
+
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 400;
+    src: url(/assests/fonts/Manrope-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 500;
+    src: url(/assests/fonts/Manrope-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 600;
+    src: url(/assests/fonts/Manrope-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 700;
+    src: url(/assests/fonts/Manrope-Bold.ttf);
+}
+
+body{
+    background-color: #3B323C;
+}
+
+.container{
+    display: flex;
+}
+
+/* Sidebar start */
+.sidebar{
+    width:23%;
+    height: 100vh;
+    background-color: #2b2a2a60;
+    color:#ffffff27;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s ease;
+}
+
+.sidebar:hover{
+    background-color: #2B2A2A;
+    cursor: pointer;
+    color: #FFFFFF;
+    
+}
+/* Sidebar end */
+
+.header{
+    width: 100%;
+    height: 103px;
+    background-color: #2B2A2A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-name{
+    font-weight: 700;
+    font-size: 24px;
+    color:#FFFFFF;
+    margin-left: 30px;
+}
+
+.header-account{
+    color:#FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-right: 39px;
+    gap:12px;
+}
+
+.header-photo{
+    margin-right: 8px;
+}
+
+.header-main-container{
+    width: 100%;
+}
+
+main{
+    margin: 20px 30px;
+}
+
+.main-search{
+    width: 360px;
+    height: 40px;
+    background-color:#302B2B;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.main-search>input{
+    border: none;
+    background: none;
+    width: 100%;
+    outline: 0;
+    color:#FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.search-input::placeholder{
+    color:#FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.container-toggle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-menu-container{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.main-type,.main-price{
+    width: 163px;
+    height: 40px;
+    background-color:#302B2B;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-type:nth-child(1){
+    padding-left: 15px;
+}
+.main-price>span{
+    padding-left: 15px;
+}
+
+.main-type,.main-price img{
+    padding-right: 15px;
+}
+
+/* Cards */
+
+.cards-container{
+    margin-top: 40px;
+    gap: 14px;
+}
+.card{
+    width: 253px;
+    height: 293px;
+    border-radius: 10px;
+    background: #302B2B;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+}
+
+.card-image{
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+/* 
+.card-image:hover{
+    scale: 1.05;
+} */
+
+.card-info{
+    margin: 10px 15px;
+}
+
+.exam-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-number,.teacher-name{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.exam-name{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.exam-price{
+    margin-top: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-buttons{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.start-test{
+    width: 102px;
+    height: 33px;
+    border-radius: 5px;
+    background: #675AF0;
+    border: 0;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.start-test:hover{
+    background-color: #5247c2;
+    cursor: pointer;
+}
+
+.more-details{
+    width: 102px;
+    height: 33px;
+    border-radius: 5px;
+    background: none;
+    border-radius: 5px;
+    border: 1.363px solid #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.more-details:hover{
+    background-color: #fff;
+    cursor: pointer;
+    color:#2B2A2A
+}
+
+.cards-container{
+    display: flex;
+    justify-content: space-between;
+}

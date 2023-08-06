@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Manrope;
+    color:#FFFFFF;
+}
+
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 400;
+    src: url(/assests/fonts/Manrope-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 500;
+    src: url(/assests/fonts/Manrope-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 600;
+    src: url(/assests/fonts/Manrope-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 700;
+    src: url(/assests/fonts/Manrope-Bold.ttf);
+}
+
+body{
+    background-color: #3B323C;
+}
+
+.container{
+    display: flex;
+}
+
+/* Sidebar start */
+.sidebar{
+    width:23%;
+    height: 100vh;
+    background-color: #2b2a2a60;
+    color:#ffffff27;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s ease;
+}
+
+.sidebar:hover{
+    background-color: #2B2A2A;
+    cursor: pointer;
+    color: #FFFFFF;
+    
+}
+/* Sidebar end */
+
+.header{
+    width: 100%;
+    height: 103px;
+    background-color: #2B2A2A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-name{
+    font-weight: 700;
+    font-size: 24px;
+    color:#FFFFFF;
+    margin-left: 30px;
+}
+
+.header-account{
+    color:#FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-right: 39px;
+    gap:12px;
+}
+
+.header-photo{
+    margin-right: 8px;
+}
+
+.header-main-container{
+    width: 100%;
+}
+
+main{
+    width: 1070px;
+    height: 862px;
+    margin: 20px 30px;
+    padding: 15px 40px;
+    border-radius: 14px;
+    background: #302B2B;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+}
+
+/* Main */
+.component-container{
+    display: flex;
+    justify-content: space-between;
+}
+.text{
+    margin-top:37px;
+}
+.text>h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.component-prg{
+    width: 407px;
+    height: 88px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 14px;
+}
+
+.component-price{
+    margin-top: 13px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.text>button{
+    margin-top: 10px;
+    width: 129px;
+    height: 43px;
+    border-radius: 5px;
+    background: #675AF0;
+    border: 0;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.text>button:hover{
+    background-color: #5247c2;
+    cursor: pointer;
+}
+
+.exam-time{
+    margin-top: 74px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 24px;
+}
+
+.exam-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.exam-time p{
+    font-weight: 700;
+    font-size: 16px;
+}
+.exam-image{
+    width: 96px;
+    height: 96px;
+    background-color: #675AF0;
+    border-radius:59px;
+    display: grid;
+    place-items: center;
+}
+
+.exam-questions{
+    width: 96px;
+    height: 96px;
+    background-color: #675AF0;
+    border-radius:59px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+.rating{
+    margin-top: 42px;
+}
+
+.rating-table-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-table-name>h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.rating-info{
+    margin-right: 74px;
+    display: flex;
+    gap: 109px;
+}
+
+
+.rating-table-row{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 990px;
+    height: 62px;
+    border-radius: 10px;
+    background: #302B2B;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+}
+
+.rating-person{
+    display: flex;
+    margin-left: 30px;
+    gap: 20px;
+}
