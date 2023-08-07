@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Manrope;
+    font-style: normal;
+    line-height: normal;
+    text-decoration: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login{
+    position: relative;
+    display: flex;
+    width: 824px!important;
+    height: 520px;
+    border-radius: 35px;
+    background: #F5F5FF;
+    overflow: hidden;
+    gap: 50px;
+}
+.login-left{
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    padding: 25px;
+    width: 450px;
+    height: 440px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+   
+}
+.login-left > p:nth-child(1){
+    color: #2B2A2A;
+    font-size: 24px;
+    font-weight: 700;
+}
+.login-left > p:nth-child(2){
+    margin-bottom: 20px;  
+    color: var(--light, #8A7E7E);
+    font-size: 14px;
+}
+.p-login{
+    margin-top: 20px;
+    color: #8A7E7E;
+    font-style: 14px;
+    font-weight: 500;
+}
+input{
+    margin-top: 4px;
+    width: 290px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid #D2D2D2;
+    padding: 4px;
+}
+#password-login{
+    padding-right: 33px;
+}
+.icon{
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 48.5%;
+    left: 285px;
+}
+#forgot{
+    font-size: 12px;
+    font-weight: 400;
+    color: #8A7E7E;
+    margin-left: calc(66%);
+}
+#privacy{
+    display: flex;
+}
+#text-privacy{
+    margin-top: 19px;
+    margin-left: 3px;
+    font-size: 12px;
+}
+#text-privacy >p {
+    color: #8A7E7E;
+    
+    font-weight: 500;
+}
+#text-privacy a{
+    font-style: 11px;
+    font-weight: 500;
+}
+#checkbox {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 18px;
+    border-radius: 5px;
+    border: 1px solid var(--light, #8A7E7E);
+}
+button {
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    padding: 12px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #675AF0;
+    outline: 0;
+    border: 0;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+#img-right{
+    position: relative;
+    width: 604px;
+    background: url(../icon/logimg.png) no-repeat;
+    background-size: contain;
+   
+
+}

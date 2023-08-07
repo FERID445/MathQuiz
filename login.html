@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<body>
+    <form action="">
+        <div class="login">
+            <div class="login-left">
+                <p>Login</p>
+                <p class="p-login">Welcome back! Please enter your details. </p>
+                    <label for="email" class="p-login">Email</label>
+                    <input type="email" required id="email">
+                    <label for="password-login" class="p-login">Password</label>
+                    <input type="password" id="password-login" required>
+                    <span class="icon"><img src="../assets/icon/eye.svg" alt=""></span>
+                    <a href="#" id="forgot">Forgot password</a>
+                    <div id="privacy">
+                        <input type="checkbox" id="checkbox" required>
+                        <div id="text-privacy">
+                            <p>I accept (name) and Terms of Services</p>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                    <button >Login</button>
+            </div>
+            <div id="img-right"></div>
+        </div>
+    </form>
+
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>
