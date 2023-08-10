@@ -63,7 +63,7 @@ body{
 /* Sidebar end */
 
 .header{
-    width: 100%;
+    width: calc(100%-310px);
     height: 103px;
     background-color: #fff;
     display: flex;

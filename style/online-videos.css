@@ -130,35 +130,6 @@ main{
     justify-content: space-between;
 }
 
-.main-menu-container{
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    gap: 15px;
-}
-
-.main-type,.main-price{
-    width: 163px;
-    height: 40px;
-    background-color:#302B2B;
-    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.main-type:nth-child(1){
-    padding-left: 15px;
-}
-.main-price>span{
-    padding-left: 15px;
-}
-
-.main-type,.main-price img{
-    padding-right: 15px;
-}
-
 /* Cards */
 
 .cards-container{
@@ -173,11 +144,32 @@ main{
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
 }
 
+.card>div{
+    position: relative;
+}
+
 .card-image{
     border-radius: 10px;
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
+.card-image:hover{
+    scale: 1.1;
+}
+
+.video-circle{
+    position: absolute;
+    top: 42px;
+    left: 95px;
+    transition: all 0.3s ease;
+}
+
+.video-circle:hover{
+    cursor: pointer;
+    scale: 1.08;
+}
+
 /* 
 .card-image:hover{
     scale: 1.05;
@@ -203,13 +195,6 @@ main{
     font-weight: 700;
 }
 
-.exam-price{
-    margin-top: 24px;
-    font-size: 12px;
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-end;
-}
 
 .card-buttons{
     margin-top: 10px;
@@ -227,6 +212,7 @@ main{
     font-size: 14px;
     font-weight: 400;
     transition: all 0.3s ease;
+    margin-top: 42px;
 }
 
 .start-test:hover{
@@ -234,23 +220,6 @@ main{
     cursor: pointer;
 }
 
-.more-details{
-    width: 102px;
-    height: 33px;
-    border-radius: 5px;
-    background: none;
-    border-radius: 5px;
-    border: 1.363px solid #FFF;
-    font-size: 14px;
-    font-weight: 400;
-    transition: all 0.3s ease;
-}
-
-.more-details:hover{
-    background-color: #fff;
-    cursor: pointer;
-    color:#2B2A2A
-}
 
 .cards-container{
     display: flex;

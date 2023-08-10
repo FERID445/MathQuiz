@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Manrope;
+    color:#FFFFFF;
+    transition: all 0.3s ease;
+}
+
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 400;
+    src: url(/assests/fonts/Manrope-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 500;
+    src: url(/assests/fonts/Manrope-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 600;
+    src: url(/assests/fonts/Manrope-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 700;
+    src: url(/assests/fonts/Manrope-Bold.ttf);
+}
+
+body{
+    background-color: #F6F6F6;
+}
+
+.container{
+    display: flex;
+}
+
+/* Sidebar start */
+.sidebar{
+    width:23%;
+    height: 100vh;
+    background-color: #2b2a2a60;
+    color:#ffffff27;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s ease;
+}
+
+.sidebar:hover{
+    background-color: #2B2A2A;
+    cursor: pointer;
+    color: #FFFFFF;
+    
+}
+/* Sidebar end */
+
+.header{
+    width: calc(100%-310px);
+    height: 155px;
+    background-color: #30333D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 30px;
+}
+
+.header-left hr{
+    width: 746px;
+    height: 1px;
+}
+
+.header-left button{
+    width: 141px;
+    height: 32px;
+    border-radius: 24px;
+    background: #675AF0;
+    border: 0;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-left: auto;
+    
+}
+
+.header-left button:hover{
+    background-color: #5247c2;
+    cursor: pointer;
+}
+.header-name{
+    font-weight: 700;
+    font-size: 24px;
+    color:#FFFFFF;
+}
+
+.header-account{
+    color:#FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 39px;
+    gap: 7px;
+}
+
+
+.header-account-teacher{
+    color: #C2C2C2;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header-photo{
+    margin-right: 8px;
+}
+
+.header-main-container{
+    width: 100%;
+}
+
+main{
+    margin: 20px 30px;
+}
+
+main *{
+    color: #30333D;
+}
+
+.container-toggle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-menu-container{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.main-menu-container span{
+    color: #8A7E7E;
+}
+
+.main-type-name{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.main-type,.main-price{
+    width: 163px;
+    height: 40px;
+    background-color:#FFF;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-type{
+    width: 253px;
+}
+
+.main-price{
+    width: 217px;
+}
+
+.main-type:nth-child(1){
+    padding-left: 15px;
+}
+
+.main-price>span{
+    padding-left: 15px;
+}
+.main-type>span{
+    padding-left: 15px;
+}
+
+.main-type,.main-price img{
+    padding-right: 15px;
+}
+
+/* Table ↓ */
+
+.exam-table *{
+    font-size: 16px;
+    font-weight: 500;
+}
+.exam-table{
+    width: 1070px;
+    height: 820px;
+    border-radius: 14px;
+    background: #FFF;
+    margin-top: 31px;
+}
+
+.table-container{
+    padding: 23px 20px 0 20px ;
+}
+
+.table-info-container .table-name{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.exam{
+    margin-right: 413px;
+}
+
+.exam-date,.exam-time{
+    margin-right: 120px;
+}
+
+.exam-table .line{
+    width: 1030px ;
+    margin: 0 auto;
+    margin-top: 6px;
+    border: 1px solid #E2E2E2;
+}
+
+.table-info-container{
+    margin: 10px 0;
+    height: 41px;
+}
+
+.exam-control-icons{
+    display: flex;
+    gap: 18px;
+    padding-top: 6px;
+}
+
+.exam-control-icons img{
+    width: 30px;
+    height: 30px;
+    border-radius: 34px;
+    background-color: #675AF0;
+    padding: 6px;
+}
+
+.exam-name{
+    margin-right: 320px;
+}
+
+.exam-time-info{
+    margin-right: 169px;
+}
