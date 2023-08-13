@@ -13,17 +13,27 @@ body {
     align-items: center;
     height: 100vh;
 }
-.login{
+.signup{
     position: relative;
     display: flex;
-    width: 824px!important;
-    height: 520px;
+    width: 894px!important;
+    height: 560px;
     border-radius: 35px;
     background: #F5F5FF;
     overflow: hidden;
     gap: 50px;
 }
-.login-left{
+.signup-right {
+    margin: 70px;
+    padding: 30px;
+    width: 450px;
+    height: 490px!important ;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+.signup-right{
     position: relative;
     margin-top: 40px;
     margin-left: 40px;
@@ -35,26 +45,41 @@ body {
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
     overflow: hidden; 
 }
-.login-left > p:nth-child(1){
+.signup-right > p:nth-child(1){
     color: #2B2A2A;
     font-size: 24px;
     font-weight: 700;
 }
-.login-left > p:nth-child(2){
+.signup-right > p:nth-child(2){
     margin-bottom: 20px;  
-    color: var(--light, #8A7E7E);
-    font-size: 14px;
+    color: #2B2A2A;
+    font-size: 15px;
+    font-weight: 700;
 }
-.p-login{
+.signup-p {
     margin-top: 20px;
     color: #8A7E7E;
     font-style: 14px;
     font-weight: 500;
 }
-label{
-    font-style: 15px;
+#categoria {
+    display: flex;
 }
-input{
+#student {
+    margin-top: -5px;
+    margin-right: 5px;
+}
+#teacher {
+    margin-left: 20px;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+.categories-label {
+    font-weight: 700;
+    font-size: 14px;
+}
+input {
+    outline: 0;
     margin-top: 4px;
     width: 290px;
     height: 30px;
@@ -62,47 +87,49 @@ input{
     border: 1px solid #D2D2D2;
     padding: 4px;
 }
-#password-login{
+#password-input {
     padding-right: 33px;
 }
-.icon {
+.eye-icon {
     position: absolute;
     /* margin-left: -30px; */
     margin-left: 260px;
-    top: 45.7%;
+    top: 57.7%;
     cursor: pointer;
 }
-#forgot{
+#forgot {
     font-size: 12px;
     font-weight: 400;
     color: #8A7E7E;
-    margin-left: calc(66%);
+    margin-left: calc(65%);
 }
-#privacy{
+#privacy {
     display: flex;
 }
-#text-privacy{
+#privacy-text {
     margin-top: 19px;
     margin-left: 3px;
-    font-size: 12px;
 }
-#text-privacy >p {
+#privacy-text > p {
     color: #8A7E7E;
-    
+    font-size: 12px;
     font-weight: 500;
 }
-#text-privacy a{
-    font-style: 11px;
+#privacy-text a {
+    font-size: 11px;
     font-weight: 500;
 }
-#checkbox {
+.checkbox {
     cursor: pointer;
     margin-top: 20px;
     width: 18px;
     border-radius: 5px;
-    border: 1px solid var(--light, #8A7E7E);
+    border: 1px solid #8A7E7E;
 }
- #btn {
+#privacy > input {
+    margin-right: 5px;
+}
+#signup {
     cursor: pointer;
     margin-top: 20px;
     display: flex;
@@ -121,21 +148,15 @@ input{
     cursor: pointer;
     transition: 1s;
 }
- #btn:hover{
-    border: 2px solid #675AF0;
-    /* color: #162938; */
-    background: transparent;
-   
-    color: #675AF0;
+#signup:hover{
+   border: 2px solid #675AF0;
+   /* color: #162938; */
+   background: transparent;
+  
+   color: #675AF0;
 }
-#img-right{
-    position: relative;
-    width: 604px;
-    background: url(../assests/icon/logimg.png) no-repeat;
+.signup-left {
+    width: 60%;
+    background: url(../assests/images/OM6UUZ0\ 1.png), lightgray 50% / cover no-repeat;
     background-size: contain;
-    transition: .2s;
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
-    -ms-transition: .2s;
-    -o-transition: .2s;
 }

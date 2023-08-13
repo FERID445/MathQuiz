@@ -3,116 +3,262 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/css/homepage.css" />
+    <link rel="stylesheet" href="./style/homepage.css" />
   </head>
   <body>
     <header>
       <div class="header-container">
         <h2 class="logo">
-          <img src="../assets/icon/MathQuiz.svg" alt="" />
+          <img src="./assests/icon/MathQuiz.svg" alt="" />
         </h2>
         <nav class="navigation">
-          <a href="#">Imtahanlar</a>
-          <a href="#">Onlayn videolar</a>
-          <a href="#">Haqqımızda</a>
-          <button class="btn-login">Login</button>
-          <button class="btn-signup">Sign up</button>
+          <ul class="navigation">
+            <li href="#">Imtahanlar</li>
+            <li href="#">Onlayn videolar</li>
+            <li href="#">Haqqımızda</li> 
+          </ul>
+        <a href="./login.html" class="btn-login">Login</a>
+        <a class="btn-signup" href="./signup.html">Sign up</a>
         </nav>
       </div>
     </header>
+                  
+   <div class="slides">
+                <!-- first slider  -->
+        <div class="mySlider">
+          <div class="numbertext">1 / 3</div>
+        <div class="slides-left">
+          <p>9-cu sinif buraxılış riyaziyyat imtahanı</p>
+          <p>Pulsuz şəkildə başla</p>
+          <button class="slides-start">Testə başla</button>
+          <button class="slides-more">Daha ətraflı</button>
+       </div>
+        
+        <div class="slides-right">
+          <div class="slides-right-tab">
+            <p>9-cu sinif</p>
+            <span>Buraxılış imtahanı</span>
+            <img id="slides-img" src="./assests/images/slides.png" />
+          </div>
+        </div>
+        </div>
+                  <!-- second slider  -->
+                  <div class="mySlider">
+                    <div class="numbertext">2 / 3</div>
+                  <div class="slides-left">
+                    <p>10-cu sinif buraxılış riyaziyyat imtahanı</p>
+                    <p>Pulsuz şəkildə başla</p>
+                    <button class="slides-start">Testə başla</button>
+                    <button class="slides-more">Daha ətraflı</button>
+                 </div>
+                  
+                  <div class="slides-right">
+                    <div class="slides-right-tab">
+                      <p>10-cu sinif</p>
+                      <span>Buraxılış imtahanı</span>
+                      <img id="slides-img" src="./assests/images/slides.png" />
+                    </div>
+                  </div>
+                  </div>
+                    <!-- third slider  -->
+                    <div class="mySlider">
+                      <div class="numbertext">3 / 3</div>
+                    <div class="slides-left">
+                      <p>11-ci sinif buraxılış riyaziyyat imtahanı</p>
+                      <p>Pulsuz şəkildə başla</p>
+                      <button class="slides-start">Testə başla</button>
+                      <button class="slides-more">Daha ətraflı</button>
+                   </div>
+                    
+                    <div class="slides-right">
+                      <div class="slides-right-tab">
+                        <p>11-ci sinif</p>
+                        <span>Buraxılış imtahanı</span>
+                        <img id="slides-img" src="./assests/images/slides.png" />
+                      </div>
+                    </div>
+                    </div>
 
-    <div class="slides">
-      <div class="slides-left">
-        <p>9-cu sinif buraxılış riyaziyyat imtahanı</p>
-        <p>Pulsuz şəkildə başla</p>
-        <button class="slides-start">Testə başla</button>
-        <button class="slides-more">Daha ətraflı</button>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <div class="slider-line" "text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
-      <div class="slices-line">
-        <p></p>
-        <p></p>
-        <p></p>
-      </div>
-      <div class="slides-right">
-        <div class="slides-right-tab">
-          <p>9-cu sinif</p>
-          <span>Buraxılış imtahanı</span>
-          <img id="slides-img" src="../assets/img/slides.png" />
-        </div>
-        <div class="slides-right-btns">
-          <button id="left">
-            <img src="../assets/icon/forward.svg" alt="" />
-          </button>
-          <button id="rihgt">
-            <img src="../assets/icon/forward2.svg" alt="" />
-          </button>
-        </div>
-      </div>
-    </div>
+
+  </div>
 
     <div class="article">
       <div class="article-1">
-        <p>9-cu sinif buraxılış</p>
-        <p>Pulsuz şəkildə başla</p>
-        <img src="../assets/icon/article1.png" alt="" />
+        <img src="./assests/icon/article1.png" alt="" />
+        <p id="article-inf">9-cu sinif buraxılış</p>
+        <p id="article-text">Pulsuz şəkildə başla</p>
+        
         <button class="article-start">Testə başla</button>
         <button class="article-more">Daha ətraflı</button>
       </div>
       <div class="article-2">
-        <p>9-cu sinif buraxılış</p>
-        <p>Pulsuz şəkildə başla</p>
-        <img src="../assets/icon/article2.png" alt="" />
+        <img src="./assests/icon/article2.png" alt="" />
+        <p id="article-inf">9-cu sinif buraxılış</p>
+        <p id="article-text">Pulsuz şəkildə başla</p>
         <button class="article-start">Testə başla</button>
         <button class="article-more">Daha ətraflı</button>
       </div>
       <div class="article-3">
-        <p>9-cu sinif buraxılış</p>
-        <p>Pulsuz şəkildə başla</p>
-        <img src="../assets/icon/article3.png" alt="" />
+        <img src="./assests/icon/article3.png" alt="" />
+        <p id="article-inf">9-cu sinif buraxılış</p>
+        <p id="article-text">Pulsuz şəkildə başla</p>
         <button class="article-start">Testə başla</button>
         <button class="article-more">Daha ətraflı</button>
       </div>
       <div class="article-4">
-        <p>9-cu sinif buraxılış</p>
-        <p>Pulsuz şəkildə başla</p>
-        <img src="../assets/icon/article4.png" alt="" />
+        <img src="./assests/icon/article4.png" alt="" />
+        <p id="article-inf">9-cu sinif buraxılış</p>
+        <p id="article-text">Pulsuz şəkildə başla</p>
         <button class="article-start">Testə başla</button>
         <button class="article-more">Daha ətraflı</button>
       </div>
+    </div> 
+
+    
+    <section >
+      <p>Imtahana giriş</p>
+      <p>MathQuiz vasitəsi ile imtahana başlayarkən bir neçə addımlardan keçirsiniz</p>
+      
+      <div class="steps">
+        <div class="icons-section">
+          <img src="./assests/icon/user.svg" alt="">
+          <img src="./assests/icon/Line 1.png" alt="" >
+          <img src="./assests/icon/clock.svg" alt="">
+          <img src="./assests/icon/Line 1.png" alt="">
+          <img src="./assests/icon/crown.svg" alt="">
+        </div>
+        <div class="text-section">
+          <span>İlk öncə adınızı daxil edin</span>
+          <span>İmtahanın vaxtı</span>
+          <span>İmtahanın nəticəsi</span>
+        </div>
+        <div class="btn-section">
+          <button>Step 1</button>
+          <button>Step 2</button>
+          <button>Step 3</button>
+        </div>
+      </div>
+    </section>
+
+   <main>
+    <div class="main-part-1">
+      <div class="main-text">
+        <p>Sınaq imtahanında iştirak et</p>
+        <p>Əliyar Əliyev - Riyaziyyat sınaqları</p>
+        <p>Daha çox sınaqlara qatılmaq üçün</p>
+        <button>Sign up</button>
+        <div class="main-img"><img src="./assests/images/main1.png" alt=""></div>
+      </div>
+    </div>
+    <div class="main-part-2">
+      <div class="main-img2"><img src="./assests/images/main2.png" alt=""></div>
+      <div class="main-text2">
+        <img src="./assests/images/main3.png" alt="" srcset="">
+      </div>
     </div>
 
-    <!-- <div class="wrapper">
-        <span class="icon-close">
-          <ion-icon name="close"></ion-icon>
-        </span>
-  
-        <div class="form-box login">
-          <h2>Login</h2>
-          <p>Welcome back! Please enter your details.</p>
-          <form action="#">
-            <div class="input-box">
-              <input type="email" name="" id="" required />
-              <label for="">Email</label>
-            </div>
-            <div class="input-box">
-              <span class="icon"><img src="../assets/icon/eye.svg" alt=""></span>
-              <input type="password" name="" id="" required />
-              <label for="">Password</label>
-            </div>
-            <div class="remember-forgot">
-              <a href="#">Forgot Password?</a>
-            </div>
-            <div class="accept">
-              <p>I accept (name) and Terms of Services</p>
-              <a href="#">Privacy Policy</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
-          </form>
-        </div> -->
+   </main> 
+    <p id="student">Tələbələrim</p>
+   <article>
+    <div class="first">
+      <div class="color"></div>
+      <img src="./assests/images/studentimg.png" alt="">
+      <p id="cardbold">Name:</p>
+      <p id="card">Universitet:</p>
+      <p id="card">Bal:</p>
+    </div>
+    <div class="second">
+      <div class="color"></div>
+      <img src="./assests/images/studentimg.png" >
+      <p id="cardbold">Name:</p>
+      <p id="card">Universitet:</p>
+      <p id="card">Bal:</p>
+    </div>
+    <div class="third">
+      <div class="color"></div>
+      <img src="./assests/images/studentimg.png" alt="">
+      <p id="cardbold">Name:</p>
+      <p id="card">Universitet:</p>
+      <p id="card">Bal:</p>
+    </div>
+    <div class="fourth">
+      <div class="color"></div>
+      <img src="./assests/images/studentimg.png" alt="">
+      <p id="cardbold">Name:</p>
+      <p id="card">Universitet:</p>
+      <p id="card">Bal:</p>
+    </div>
+   </article>
+   
+   <footer>
+    <div class="part1">
+      <div class="foot-first">
+      <p id="foot-main">MathQuiz</p>
+      <span id="foot-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat excepturi repudiandae ad aspernatur in nostrum perspiciatis magnam. Id omnis asperiores vel cumque accusamus maiores, numquam quae necessitatibus ut impedit sapiente. </span>
+    </div>
+    <div class="foot-second">
+      <p id="foot-main">Imtahanlarımız</p>
+      <p id="foot-text">5-8ci siniflər</p>
+      <p id="foot-text">9-11ci siniflər</p>
+      <p id="foot-text">Məntiq imtahanları</p>
+      <p id="foot-text">Blok imtahanları</p>
+      <p id="foot-text">Buraxılış imtahanları</p>
+    </div>
+    <div class="foot-third">
+      <p id="foot-main">Dəstək</p>
+      <p id="foot-text">Dərsliklər</p>
+      <p id="foot-text">Ödəniş şərtləri və Qaydaları</p>
+      <p id="foot-text">Əlaqə</p>
+    </div>
+  </div>
+    <hr>
+    <div class="part2">
+      <div class="logo-foot">
+        <link src="./assests/icon/youtube.png" alt="" >
+      <img src="./assests/icon/whatsapp.svg" alt="">
+      <img src="./assests/icon/facebook.svg" alt="">
+      <img src="./assests/icon/instagram.svg" alt="">
+       <div class="logo-right">
+        <div class="right-1">
+          <p id="foot-bold">Əlaqə nömrəsi</p>
+        <p id="foot-p">+994 77 399 99 66</p>
+        <!-- <img src="./assests/icon/call-calling.svg" alt=""> -->
+        <div class="icon-foot-1">
+          <img src="./assests/icon/call-calling.svg" alt="">
+        </div>
+      </div>
+      <div class="right-2">
+          <p id="foot-bold">Ünvan</p>
+          <p id="foot-p">N.Nərimanov m/s yaxınlığı</p>
+          <div class="icon-foot-2">
+          <img src="./assests/icon/location.svg" alt="">
+          </div>
+          <!-- <img src="./assests/icon/location.svg" alt=""> -->
+        </div>
+      </div>
+     
+      
+        
+        
+        
+      </div>
+    </div>
+   </footer>
+    <script src="./js/homepage.js"></script>
+    
   </body>
 </html>
