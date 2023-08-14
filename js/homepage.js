@@ -29,25 +29,24 @@ function showSlides(n) {
 }
 
 
-// const container = document.querySelector("#container");
+const usersContainer = document.querySelector(".users-container");
 
-// let url = "../db/scoareBoard.json"
-// function getData(){
-//     fetch(url)
-//     .then((res)=> res.json())
-//     .then((data)=> {
-//         let {scoreBoard, onlineTutorials} = data;
-
-//         scoreBoard.forEach(element => {
-//             container.insertAdjacentHTML("beforeend",`
-//             <div class="first">
-//             <p>${element.fullName}</p>
-//             <p>Universitet</p>
-//             <p>Bal</p>
-//             </div>    
-//             `)
-//         }); 
-//     })
-// }
-
-// getData()
+function getUser(){
+  fetch("/db/scoreboard.json")
+  .then(res => res.json())
+  .then(data => {
+    const {students} = data
+    students.forEach(user => {
+      usersContainer.innerHTML += `
+        <div class="user-card">
+          <div class="color"></div>
+          <img src="${user.image}" alt="">
+          <p id="cardbold">Name: ${user.fullName}</p>
+          <p id="card">Universitet: ${user.university}</p>
+          <p id="card-points">Bal: ${user.point}</p>
+        </div>
+      `
+    })
+  })
+}
+getUser()

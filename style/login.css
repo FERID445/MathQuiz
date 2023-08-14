@@ -76,7 +76,7 @@ input{
     font-size: 12px;
     font-weight: 400;
     color: #8A7E7E;
-    margin-left: calc(66%);
+    margin-left: 66% ;
 }
 #privacy{
     display: flex;
