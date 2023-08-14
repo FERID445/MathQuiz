@@ -1,0 +1,72 @@
+{
+    "scoreBoard": [
+        {
+            "fullName": "Abdullayev Sənan",
+            "image":"/assests/images/card-image-1.png",
+            "qtn":"28"
+        },
+        {
+            "fullName": "Tağızadə Rasif",
+            "image":"/assests/images/card-image-2.png",
+            "qtn":"27"
+        },
+        {
+            "fullName": "Abdullayev Cavid",
+            "image":"/assests/images/card-image-1.png",
+            "qtn":"15"
+        },
+        {
+            "fullName": "Cumayeva Yetər",
+            "image":"/assests/images/card-image-2.png",
+            "qtn":"28"
+        }
+        ,
+        {
+            "fullName": "Tağızadə Anar",
+            "image":"/assests/images/card-image-1.png",
+            "qtn":"88"
+        }
+        ,
+        {
+            "fullName": "Cumayeva Maya",
+            "image":"/assests/images/card-image-2.png",
+            "qtn":"69"
+        }
+        ,
+        {
+            "fullName": "Cumayev Fərid",
+            "image":"/assests/images/card-image-1.png",
+            "qtn":"66"        
+        }
+        ,
+        {
+            "fullName": "Cumayev Anar",
+            "image":"/assests/images/card-image-2.png",
+            "qtn":"1"
+        }
+        ,
+        {
+            "fullName": "Tağızadə Anar",
+            "image":"/assests/images/card-image-1.png",
+            "qtn":"666"
+        }
+        ,
+        {
+            "fullName": "Cumayev Ömər",
+            "image":"/assests/images/card-image-2.png",
+            "qtn":"3"
+        }
+        ,
+        {
+            "fullName": "Cumayeva Aylin",
+            "image":"/assests/images/card-image-1.png",
+            "qtn":"13"
+        }
+        ,
+        {
+            "fullName": "Cumayev Fərman",
+            "image":"/assests/images/card-image-2.png",
+            "qtn":"47"
+        }
+    ]
+}

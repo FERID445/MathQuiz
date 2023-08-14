@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Manrope;
+    color:#FFFFFF;
+}
+
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 400;
+    src: url(/assests/fonts/Manrope-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 500;
+    src: url(/assests/fonts/Manrope-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 600;
+    src: url(/assests/fonts/Manrope-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 700;
+    src: url(/assests/fonts/Manrope-Bold.ttf);
+}
+
+body{
+    background-color: #3B323C;
+}
+
+.container{
+    display: flex;
+}
+
+
+.header{
+    width: calc(100%-310px);
+    height: 103px;
+    background-color: #2B2A2A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-name{
+    font-weight: 700;
+    font-size: 24px;
+    color:#FFFFFF;
+    margin-left: 30px;
+}
+
+.header-account{
+    color:#FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-right: 39px;
+    gap:12px;
+}
+
+.header-photo{
+    margin-right: 8px;
+}
+
+.header-main-container{
+    width: 100%;
+}
+
+main{
+    margin: 20px 30px;
+    width: 96%;
+    height: 2200px;
+    border-radius: 14px;
+    background-color: #302B2B;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+    padding: 0 77px;
+}
+
+.exam-name-title{
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-exam{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.text-nine-grade{
+    font-size: 20px;
+    color: #BCBCBC;
+    font-weight: 700;
+}
+
+.darkmode-container{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.dark-mode-text{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.switch{
+    width: 63px;
+    height: 30px;
+    border-radius: 30px;
+    background: #675AF0;
+    padding: 4px 4px 4px 37px;
+}
+.circle{
+    width: 22px;
+    height: 22px;
+    border-radius: 17px;
+    background: #302B2B;
+}
+
+/* Student and Timer */
+
+.exam-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.student{
+    width: 70%;
+    height: 58px;
+    border-radius: 10px;
+    background: #393535;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 14px 14px 20px;
+}
+
+.exam-time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 24%;
+    border-radius: 10px;
+    background: #393535;
+    padding: 14px 14px;
+}
+
+.student-name{
+    font-size: 16px;
+}
+
+.time{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.pages{
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 15px;
+}
+
+.bar{
+    width: 70%;
+    height: 10px;
+    border-radius: 33px;
+    background: #5F5E5E;
+    margin: 0 auto;
+}
+
+.bar>div{
+    width: 100%;
+    height: 10px;
+    border-radius: 33px;
+    background: var(--primary, #675AF0);
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 49px;
+    
+}
+
+.question div{
+    font-weight: 700;
+}
+
+.correct-variant{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+
+.variant{
+    width: 55%;
+    height: 58px;
+    border-radius: 10px;
+    background: #393535;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding: 18px 0px 18px 20px;
+    margin-bottom: 15px;
+    transition: all 0.2s ease-in-out;
+}
+.variant-circle{
+    width: 22px;
+    height: 22px;
+    border:2px solid #8A7E7E;
+    border-radius:50%;
+}
+
+.variant:hover{
+    background: #423d3d;
+    cursor: pointer;
+}
+
+.next-button{
+    margin: 50px auto;
+    text-decoration: none;
+    display: flex;
+    width: 219px;
+    height: 58px;
+    padding: 16px 56px;
+    border-radius: 10px;
+    background: var(--primary, #675AF0);
+    transition: all 0.2s ease-in-out;
+}
+
+.next-button:hover{
+    background-color: #665af0e3;
+}
+
+
+.question-picture{
+    width: 595px;
+    height: 217px;
+    border: 3px solid #8A7E7E;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+}
