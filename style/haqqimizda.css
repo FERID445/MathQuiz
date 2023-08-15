@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --text-color: black;
+    /* --text-color: white; */
+
+    --purple-color:#675AF0;
+
+    --title-color: #675AF0;
+    /* --title-color: white; */
+
+    --data-color: red;
+    /* --data-color: white; */
+
+    --main-bg: #F6F6F6;
+    /* --main-bg: #3B323C; */
+
+    --container-bg: white;
+    /* --container-bg: #2B2A2A; */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+/* sidebar */
+
+.sidebar{
+    width: 276px;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--container-bg);
+    box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-title{
+    padding: 50px 75px;
+}
+
+.sidebar-list{
+    padding: 30px;
+    list-style: none;
+}
+
+.sidebar-list-item{
+    padding: 20px;
+    font-size: 18px;
+}
+
+.sidebar-list-item.active{
+    background-color:  var(--purple-color);
+    border-radius: 8px;
+}
+
+.sidebar-list-item:hover{
+    transition: 0.5s;
+    border-radius: 8px;
+    background-color:  var(--purple-color);
+    cursor: pointer;
+}
+
+#span_sidebar{
+    color:  var(--title-color);
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 28px;
+}
+
+.list-item{
+    margin-left: 17px;
+}
+
+   /* end sidebar */
+
+   /* header */
+   
+.container_2{
+    min-height: 100vh;
+    width: calc(100% - 276px);
+    margin-left: 276px;
+}
+
+.header{
+    display: flex;
+    background-color: var(--container-bg);
+    height: 90px;
+    justify-content: space-between;
+}
+
+#span_header{
+    padding-left: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+.header-account{
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    gap:12px;
+}
+
+.header-photo{
+    margin-right: 8px;
+}
+
+.arrow.active{
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+.header .arrow:hover{
+    cursor: pointer;
+}
+
+/* end header */
+
+ /* main */
+
+.main{
+    background-color: var(--main-bg);
+    width: 100%;
+    min-height: calc(100vh - 90px);
+}
+
+.card-container{
+    padding: 30px 20px;
+}
+
+.card{
+         border-radius:8px;
+         background-color: var(--container-bg);
+}
+
+.info{
+    padding: 15px;
+    display: flex;
+}
+
+.info img{
+    width: 200px;
+    height: 250px;
+}
+
+.info span{
+    position: relative;
+    left: 20px;
+    padding-right: 15px;
+    top: 10px;
+    color: var(--text-color);
+}
+
+.card .about{
+    bottom: 35px;
+    position: relative;
+    margin-left: 20px;
+} 
+
+.about p{
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+article{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* end main */
+
+/* sertifikation */
+
+.sertification{
+    padding: 0 20px;
+}
+
+.sertification-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sertifikat1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.sertifikat2{
+    position: relative;
+    bottom: 30px;
+}
+
+/* toggle */
+
+#toggle{
+    position: relative;
+    top: 10px;
+    left: 18px;
+    display: block;
+    width: 70px;
+    height: 35px;
+    background-color: #E2E2E2;
+    transition: 0.5s;
+    border-radius:160px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+     inset 0 8px 8px rgba(0, 0, 0, 0.1),
+    inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#toggle.active{
+    background-color:#675AF0;
+    box-shadow:inset 0 2px 60px rgba(0,0,0,0.1),
+    inset 0 2px 8px rgba(0,0,0,0.1),
+    inset 0 -4px 8px rgba(0,0,0,0.05),
+}
+
+#toggle .indicator{
+   position: absolute;
+   top: 5px;
+   left: 4px;
+   width: 26px;
+   height: 26px;
+   background-color:var(--container-bg);
+   border-radius:50%;
+   transform: scale(0.9);
+   transition: 0.5s;
+   -webkit-transition: 0.5s;
+   -moz-transition: 0.5s;
+   -ms-transition: 0.5s;
+   -o-transition: 0.5s;
+}
+
+#toggle.active .indicator {
+     background-color: #302B2B;
+     left: 42px;
+}
+
+/* end toggle */
+
+

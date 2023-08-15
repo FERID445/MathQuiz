@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./style/dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="https://webstockreview.net/images/clipart-math-icon-10.png" type="image/x-icon">
+    </head>
+
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-title">
+                <span id="span_sidebar">MathQuiz</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item active">
+                    <a href="./dasboard.html" id="list-item">
+                        <i class="fa-solid fa-gauge"></i>
+                          <span >Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item" id="list-item">
+                    <a href="#">
+                        <i class="fa-solid fa-vials"></i>
+                         <span >İmtahanlar</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+
+                    <a href="./online-videos.html">
+                        <i class="fa-solid fa-video"></i>
+                         <span id="list-item">Onlayn videolar</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <i class="fa-solid fa-chart-simple"></i>
+                         <span id="list-item">ScoreBoard</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+
+                    <a href=".//haqqimizda/haqqimizda.html">
+                        <i class="fa-solid fa-address-card"></i>
+                        <span id="list-item"> Haqqimizda</span>
+                    </a>
+                </li>
+                <li>
+                    <span id="list-item" class="list-item">Dark mode</span>
+                    <div id="toggle">
+                        <i class="indicator"></i>
+                    </div>
+
+                </li>
+            </ul>
+        </aside>
+
+        <div class="container_2">
+
+            <header class="header">
+                <h1 id="span_header">Dashboard</h1>
+                <div class="header-account">
+                    <div class="header-photo"><img src="./assests/images/Frame 32.svg" alt=""></div>
+                    <div class="mail">username@gmail.com</div>
+                    <img src="./assests/icon/arrow.svg" alt="" class="arrow">
+                </div>
+            </header>
+
+
+            <main class="main">
+
+                <div class="card">
+
+                    <div class="about_student">
+
+                        <img src="./assests/images/Frame 90.svg" alt="">
+                        <div class="information">
+                            <ul id="ul">
+                                <li id="li">Harry Miller</li>
+                                <li>Age 19 years</li>
+                                <li>Parents: Jayson Miller</li>
+                            </ul>
+                            <div class="icon">
+                                <button>Goals</button>
+                                <ul>
+                                    <li><img src="./assests/icon/Crown (1).png" alt=""></li>
+                                    <li><img src="./assests/icon/3176367.png" alt="" width="25px"></li>
+                                    <li><img src="./assests/icon/Medal.svg" alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prize_student">
+                        <ul>
+                            <li><img src="./assests/icon/Crown (1).png" alt=""><span>9-cu sinif buraxilis</span></li>
+                            <li> <img src="./assests/icon/3176367.png" alt="" width="25px"></i><span>11-ci sinif buraxilis</span></li>
+                            <li><img src="./assests/icon/Medal.svg" alt=""><span>Mentiq imtahani</span></li>
+                        </ul>
+                        <a href="#">See more</a>
+                    </div>
+                </div>
+                <p id="exam">İmtahanlar</p>
+
+                <div class="cards-container" id="container">
+                </div>
+        </div>
+        </main>
+
+    </div>
+    </div>
+
+    <script src="./js/dashboard-data.js" ></script>
+    <script src="./js/dashboard.js"></script>
+</body>
+
+</html>
