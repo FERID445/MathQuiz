@@ -1,0 +1,28 @@
+{
+    "students": [
+        {
+            "fullName": "Səməd şükürov",
+            "point": 630,
+            "university": "ADA",
+            "image": "/assests/images/studentimg.png"
+        },
+        {
+            "fullName": "Mustafazadə Dilbər",
+            "point": 550,
+            "university": "MAA",
+            "image": "/assests/images/studentimg.png"
+        },
+        {
+            "fullName": "Səməd şükürov",
+            "point": 630,
+            "university": "ADA",
+            "image": "/assests/images/studentimg.png"
+        },
+        {
+            "fullName": "Mustafazadə Dilbər",
+            "point": 550,
+            "university": "MAA",
+            "image": "/assests/images/studentimg.png"
+        }
+    ]
+}

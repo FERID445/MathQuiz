@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/signup.css">
+</head>
+<body>
+    <form action="#">
+      <div class="signup">
+        <div class="signup-left"></div>
+        <div class="signup-right">
+          <p>Create new account</p>
+          <p class="signup-p">I am</p>
+          <div id="categoria">
+              <input name="iam" type="radio" id="student" class="checkbox">
+              <label for="student" class="categories-label">Student</label>
+              <input name="iam" type="radio" id="teacher" class="checkbox">
+              <label for="teacher" class="categories-label">Teacher</label> 
+          </div>
+          <label for="date" class="signup-p">Date of birth</label>
+          <input id="date" type="date" required>
+          <label for="email" class="signup-p">Email</label>
+          <input id="email" type="email" required>
+          <label for="password-input" class="signup-p">Password</label>
+          <input id="password-input" type="password" required>
+          <span class="eye-icon"><img src="./assests/icon/eye.svg" alt=""></span>
+          <a href="" id="forgot">Forgot password</a>
+          <div id="privacy">
+            <input type="checkbox" class="checkbox" id="privacy-checkbox" required>
+              <div id="privacy-text">
+                  <p>I accept (name) and Terms of Services</p>
+                  <a href="">Privacy Policy</a>
+              </div>   
+          </div>
+          <button id="signup">Sign Up</button>
+        </div>
+      </div>
+  </div>
+    </form>
+    <script src="./js/signup.js"></script>
+
+</body>
+</html>
