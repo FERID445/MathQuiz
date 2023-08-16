@@ -563,7 +563,7 @@ main{
     margin-bottom: 35px;
 }
 
-article{
+.users-container{
     display: flex;
     justify-content: center;
     align-items: center;
