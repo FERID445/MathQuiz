@@ -1,9 +1,12 @@
+@import url(./sidebar.css);
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Manrope;
-    color:#FFFFFF;
+    /* color:#FFFFFF; */
+    text-decoration: none;
 }
 
 
@@ -34,51 +37,33 @@
     src: url(/assests/fonts/Manrope-Bold.ttf);
 }
 
+
 body{
-    background-color: #3B323C;
+    background-color: var(--main-bg);
 }
 
 .container{
     display: flex;
 }
 
-/* Sidebar start */
-.sidebar{
-    width:313px !important; 
-    height: 100vh;
-    background-color: #2b2a2a60;
-    color:#ffffff27;
-    display: grid;
-    place-items: center;
-    transition: all 0.5s ease;
-}
-
-.sidebar:hover{
-    background-color: #2B2A2A;
-    cursor: pointer;
-    color: #FFFFFF;
-    
-}
-/* Sidebar end */
-
 .header{
     width: calc(100%-310px);
     height: 103px;
-    background-color: #2B2A2A;
+    background-color: var(--container-bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .header-name{
+    color: var(--text-color);
     font-weight: 700;
     font-size: 24px;
-    color:#FFFFFF;
     margin-left: 30px;
 }
 
 .header-account{
-    color:#FFFFFF;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     margin-right: 39px;
@@ -91,6 +76,7 @@ body{
 
 .header-main-container{
     width: 77.9%;
+    margin-left: 21%;
 }
 
 main{
@@ -100,7 +86,7 @@ main{
 .main-search{
     width: 360px;
     height: 40px;
-    background-color:#302B2B;
+    background-color:var(--container-bg);
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     display: flex;
@@ -114,16 +100,17 @@ main{
     background: none;
     width: 100%;
     outline: 0;
-    color:#FFFFFF;
+    color: var(--text-color);
     font-weight: 500;
     font-size: 16px;
 }
 
 .search-input::placeholder{
-    color:#FFFFFF;
+    color: var(--text-color);
     font-weight: 500;
     font-size: 16px;
 }
+
 
 .container-toggle{
     display: flex;
@@ -140,7 +127,7 @@ main{
 .main-type,.main-price{
     width: 163px;
     height: 40px;
-    background-color:#302B2B;
+    background-color:var(--container-bg);
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     display: flex;
@@ -170,10 +157,13 @@ main{
     width: 253px;
     height: 293px;
     border-radius: 10px;
-    background: #302B2B;
+    background: var(--container-bg);
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
 }
 
+.start-test a{
+    color: white;
+}
 .card-image{
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -194,6 +184,7 @@ main{
 }
 
 .question-number,.teacher-name{
+    color: var(--data-color);
     font-size: 12px;
     font-weight: 700;
 }
@@ -205,6 +196,7 @@ main{
 }
 
 .exam-price{
+    color: var(--data-color);
     margin-top: 24px;
     font-size: 12px;
     font-weight: 700;
@@ -225,6 +217,7 @@ main{
     border-radius: 5px;
     background: #675AF0;
     border: 0;
+    color: #FFF;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.3s ease;
@@ -241,7 +234,8 @@ main{
     border-radius: 5px;
     background: none;
     border-radius: 5px;
-    border: 1.363px solid #FFF;
+    color:var(--title-color);
+    border: 2px solid var(--title-color);
     font-size: 14px;
     font-weight: 400;
     transition: all 0.3s ease;
@@ -253,6 +247,9 @@ main{
     color:#2B2A2A
 }
 
+.more-details a{
+    color: var(--title-color);
+}
 .cards-container{
     display: flex;
     justify-content: space-between;

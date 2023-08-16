@@ -15,13 +15,13 @@ function getData(){
                 <div class="card-info">
                     <div class="exam-info">
                         <div class="question-number">${element.qtn} sual</div>
-                        <div class="teacher-name">${element.fullName}</div>
+                        <div class="teacher-name" id="searchBar">${element.fullName}</div>
                     </div>
                     <div class="exam-name">9-cu sinif buraxılış</div>
                     <div class="exam-price">Pulsuz</div>
                     <div class="card-buttons">
-                        <button class="start-test">Testə başla</button>
-                        <button class="more-details">Daha ətraflı</button>
+                        <button class="start-test"><a href="/imtahan-seh1.html">Testə başla</a></button>
+                        <button class="more-details"><a href="/dahaEtfImt.html">Daha ətraflı</a></button>
                     </div>
                 </div>
             </div>       

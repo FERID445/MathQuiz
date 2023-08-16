@@ -1,9 +1,10 @@
+@import url(./sidebar.css);
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Manrope;
-    color:#FFFFFF;
 }
 
 
@@ -35,36 +36,18 @@
 }
 
 body{
-    background-color: #3B323C;
+    background-color: var(--main-bg);
 }
 
 .container{
     display: flex;
 }
 
-/* Sidebar start */
-.sidebar{
-    width:23%;
-    height: 100vh;
-    background-color: #2b2a2a60;
-    color:#ffffff27;
-    display: grid;
-    place-items: center;
-    transition: all 0.5s ease;
-}
-
-.sidebar:hover{
-    background-color: #2B2A2A;
-    cursor: pointer;
-    color: #FFFFFF;
-    
-}
-/* Sidebar end */
 
 .header{
     width: calc(100%-310px);
     height: 103px;
-    background-color: #2B2A2A;
+    background-color: var(--container-bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,12 +56,12 @@ body{
 .header-name{
     font-weight: 700;
     font-size: 24px;
-    color:#FFFFFF;
+    color: var(--text-color);
     margin-left: 30px;
 }
 
 .header-account{
-    color:#FFFFFF;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     margin-right: 39px;
@@ -100,7 +83,7 @@ main{
 .main-search{
     width: 360px;
     height: 40px;
-    background-color:#302B2B;
+    background-color:var(--container-bg);
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     display: flex;
@@ -114,13 +97,13 @@ main{
     background: none;
     width: 100%;
     outline: 0;
-    color:#FFFFFF;
+    color: var(--text-color);
     font-weight: 500;
     font-size: 16px;
 }
 
 .search-input::placeholder{
-    color:#FFFFFF;
+    color: var(--text-color);
     font-weight: 500;
     font-size: 16px;
 }
@@ -135,12 +118,14 @@ main{
 .cards-container{
     margin-top: 40px;
     gap: 14px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .card{
     width: 253px;
     height: 293px;
     border-radius: 10px;
-    background: #302B2B;
+    background: var(--container-bg);
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
 }
 
@@ -187,6 +172,7 @@ main{
 .question-number,.teacher-name{
     font-size: 12px;
     font-weight: 700;
+    color: var(--data-color);
 }
 
 .exam-name{
@@ -204,6 +190,7 @@ main{
 
 
 .start-test{
+    color: white;
     width: 102px;
     height: 33px;
     border-radius: 5px;
