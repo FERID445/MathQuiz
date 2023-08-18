@@ -27,6 +27,8 @@
           </div>
           <label for="date" class="signup-p">Date of birth</label>
           <input id="date" type="date" required>
+          <label for="">UserName:</label>
+          <input type="text" id="userName">
           <label for="email" class="signup-p">Email</label>
           <input id="email" type="email" required>
           <label for="password-input" class="signup-p">Password</label>
@@ -46,6 +48,91 @@
   </div>
     </form>
     <script src="./js/signup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+      import { child, get, getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+     
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCMaAMoJPo-aRy9wBTWSpMe0LFcsbjlm08",
+        authDomain: "kodx-project.firebaseapp.com",
+        databaseURL: "https://kodx-project-default-rtdb.firebaseio.com",
+        projectId: "kodx-project",
+        storageBucket: "kodx-project.appspot.com",
+        messagingSenderId: "448320862317",
+        appId: "1:448320862317:web:4f20343ff136a745862764"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase()
+
+      // ===============References================
+      const email = document.getElementById('email');
+      const password = document.getElementById('password-input');
+      const userName = document.getElementById('userName');
+      const signupBtn = document.querySelector('#signup');
+
+      // ===============Validation ================
+      function validation(){
+        const emailregex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
+        const passwordregex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+        const usernameregex = /^[a-zA-Z0-9]{3,20}$/;
+
+        if(!usernameregex.test(userName.value)){
+          alert('Please enter a valid userName');
+          return false;
+        }
+        if(!emailregex.test(email.value)){
+          alert('Please enter a valid email');
+          return false;
+        }
+        if(!passwordregex.test(password.value)){
+          alert('Please enter a valid password');
+          return false;
+        }
+
+        return true;
+      }
+
+      // ===============Register User ================
+      function registerUser(e){
+        if(!validation()) return ;
+        e.preventDefault();
+        const dbRef = ref(db)
+
+        get(child(dbRef , `users/${userName.value}`)).then(function(snapshot){
+          if(snapshot.exists()){
+            alert('Username already exists');
+          }
+          else{
+            set(ref(db, 'users/' + userName.value), {
+              email: email.value,
+              password: encryptPassword(),
+              userName: userName.value
+            }).then(function(){
+              alert('User registered successfully');
+            }).catch(function(error){
+              alert('Error occured while registering user');
+            })
+
+            window.location.href = 'login.html';
+          }
+        })
+      }
+
+
+      // =============== Encrypt Password ================ 
+
+      function encryptPassword(){
+        var encyrptPass = CryptoJS.AES.encrypt(password.value, "Secret Passphrase");
+        return encyrptPass.toString();
+      }
+      // Event Listeners 
+      signupBtn.addEventListener('click', registerUser);
+    </script>
 
 </body>
 </html>
