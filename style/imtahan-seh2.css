@@ -6,8 +6,6 @@
     color:#FFFFFF;
 }
 
-
-
 @font-face {
     font-family: Manrope;
     font-weight: 400;
@@ -217,11 +215,10 @@ main{
     margin-bottom: 15px;
     transition: all 0.2s ease-in-out;
 }
-.variant-circle{
-    width: 22px;
-    height: 22px;
-    border:2px solid #8A7E7E;
-    border-radius:50%;
+
+.variant input{
+    width: 20px;
+    height: 17px;
 }
 
 .variant:hover{

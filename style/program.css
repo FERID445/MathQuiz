@@ -9,7 +9,24 @@
     text-decoration: none;
 }
 
+:root{
+    --text-color: black;
+    /* --text-color: white; */
 
+    --purple-color:#675AF0;
+
+    --title-color: #675AF0;
+    /* --title-color: white; */
+
+    --data-color: red;
+    /* --data-color: white; */
+
+    --main-bg: #F6F6F6;
+    /* --main-bg: #3B323C; */
+
+    --container-bg: white;
+    /* --container-bg: #2B2A2A; */
+}
 
 @font-face {
     font-family: Manrope;
@@ -46,38 +63,48 @@ body{
     display: flex;
 }
 
+.header-main-container{
+    min-height: 100vh;
+    width: calc(100% - 276px);
+    margin-left: 276px;
+}
+
 .header{
-    width: calc(100%-310px);
-    height: 103px;
-    background-color: var(--container-bg);
     display: flex;
-    align-items: center;
+    background-color: var(--container-bg);
+    height: 90px;
     justify-content: space-between;
 }
 
-.header-name{
-    color: var(--text-color);
-    font-weight: 700;
-    font-size: 24px;
-    margin-left: 30px;
+#span_header{
+    padding-left: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 30px;
 }
 
 .header-account{
     color: var(--text-color);
     display: flex;
     align-items: center;
-    margin-right: 39px;
     gap:12px;
+    margin-right: 10px;
 }
 
 .header-photo{
     margin-right: 8px;
 }
 
-.header-main-container{
-    width: 77.9%;
-    margin-left: 21%;
+.arrow.active{
+    transform: rotate(180deg);
+    transition: 0.5s;
 }
+
+.header .arrow:hover{
+    cursor: pointer;
+}
+
+/* main */
 
 main{
     margin: 20px 30px;
