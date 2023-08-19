@@ -71,7 +71,12 @@ input{
     margin-left: 260px;
     top: 45.7%;
     cursor: pointer;
+    transition: 0.5s;
 }
+
+.icon:hover{ 
+    transform: scale(1.2); 
+ } 
 #forgot{
     font-size: 12px;
     font-weight: 400;
