@@ -1,40 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style/login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style/login.css" />
+  </head>
+  <body>
     <form action="">
-        <div class="login">
-            <div class="login-left">
-                <p>Login</p>
-                <p class="p-login">Welcome back! Please enter your details. </p>
-                    <label for="email" class="p-login">Email</label>
-                    <input type="email" required id="email">
-                    <label for="password-login" class="p-login">Password</label>
-                    <input type="password" id="password-login" required>
-                    <span class="icon"><img src="./assests/icon/eye.svg" alt=""></span>
-                    <a href="#" id="forgot">Forgot password</a>
-                    <div id="privacy">
-                        <input type="checkbox" id="checkbox" required > 
-                        <div id="text-privacy">
-                            <p>I accept (name) and Terms of Services</p>
-                            <a href="#">Privacy Policy</a>
-                        </div>
-                    </div>
-                    <button id="btn">Login</button>
+      <div class="login">
+        <div class="login-left">
+          <p>Login</p>
+          <p class="p-login">Welcome back! Please enter your details.</p>
+          <label for="userName" class="p-login">userName</label>
+          <input type="text" required id="userName" />
+          <label for="email" class="p-login">Email</label>
+          <input type="email" required id="email" />
+          <label for="password-login" class="p-login">Password</label>
+          <input type="password" id="password-login" required />
+          <span class="icon"><img src="./assests/icon/eye.svg" alt="" /></span>
+          <a href="#" id="forgot">Forgot password</a>
+          <div id="privacy">
+            <input
+              type="checkbox"
+              id="checkbox"
+              required
+              class="keepLoggedIn"
+            />
+            <div id="text-privacy">
+              <p>Keep Logged me</p>
+              <a href="#">Privacy Policy</a>
             </div>
-            <div id="img-right"></div>
+          </div>
+          <button id="btn">Login</button>
         </div>
+        <div id="img-right"></div>
+      </div>
     </form>
 
     <script src="./js/login.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script type="module">
+      import {
+        child,
+        get,
+        getDatabase,
+        ref,
+      } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCMaAMoJPo-aRy9wBTWSpMe0LFcsbjlm08",
+        authDomain: "kodx-project.firebaseapp.com",
+        databaseURL: "https://kodx-project-default-rtdb.firebaseio.com",
+        projectId: "kodx-project",
+        storageBucket: "kodx-project.appspot.com",
+        messagingSenderId: "448320862317",
+        appId: "1:448320862317:web:4f20343ff136a745862764",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase();
+
+      // The References
+      const password = document.getElementById("password-login");
+      const userName = document.getElementById("userName");
+      const loginBtn = document.getElementById("btn");
+
+      //* Authentication
+      function authentication(e) {
+        e.preventDefault();
+        const dbRef = ref(db);
+
+        get(child(dbRef, `users/${userName.value}`)).then(function (snapshot) {
+          console.log(snapshot.val());
+          if (snapshot.exists()) {
+            let dbPass = decryptPass(snapshot.val().password);
+
+            if (dbPass == password.value) {
+              login(snapshot.val());
+            } else {
+              alert("password is incorrect");
+            }
+          } else {
+            alert("Username or password is incorrect");
+          }
+        });
+      }
+
+      //! Decrypt Prosses
+      function decryptPass(dbpass) {
+        var decrypted = CryptoJS.AES.decrypt(dbpass, "Secret Passphrase");
+        return decrypted.toString(CryptoJS.enc.Utf8);
+      }
+
+      //* Login prosses
+      function login(user) {
+        let keepLoggedIn = document.querySelector(".keepLoggedIn").checked;
+        console.log(keepLoggedIn);
+        // checkbox false => meni yadda saxlama!!!
+        if (!keepLoggedIn) {
+          sessionStorage.setItem("user", JSON.stringify(user));
+          window.location.href = "homepage.html";
+        } else {
+          localStorage.setItem("keepLoggedIn", "true");
+          localStorage.setItem("user", JSON.stringify(user));
+          window.location.href = "homepage.html";
+        }
+      }
+
+      // Assign the event listener
+      loginBtn.addEventListener("click", authentication);
+    </script>
+  </body>
 </html>

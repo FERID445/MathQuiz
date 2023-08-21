@@ -30,21 +30,21 @@ if (localStorage.getItem('allUsers')) {
     allUsers = JSON.parse(localStorage.getItem('allUsers'));
 }
 
-login.addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent the form from submitting
+// login.addEventListener('click', function (event) {
+//     event.preventDefault(); // Prevent the form from submitting
 
-    let email = document.getElementById('email').value;
-    let userPassword = document.getElementById('password-login').value;
+//     let email = document.getElementById('email').value;
+//     let userPassword = document.getElementById('password-login').value;
 
-    if (email !== '' && userPassword !== '') {
-        let foundUser = allUsers.find(user => user.email === email && user.password === userPassword);
+//     if (email !== '' && userPassword !== '') {
+//         let foundUser = allUsers.find(user => user.email === email && user.password === userPassword);
 
-        if (foundUser) {
-            alert('Login successful!');
-        } else {
-            alert('Invalid email or password. Please try again.');
-        }
-    } else {
-        alert('Please enter email and password.');
-    }
-});
+//         if (foundUser) {
+//             alert('Login successful!');
+//         } else {
+//             alert('Invalid email or password. Please try again.');
+//         }
+//     } else {
+//         alert('Please enter email and password.');
+//     }
+// });

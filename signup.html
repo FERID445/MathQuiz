@@ -77,8 +77,8 @@
 
       // ===============Validation ================
       function validation(){
-        const emailregex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
-        const passwordregex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+        const passwordregex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        const emailregex = /^(?=.*[a-z])(?=.*[!@#$%^&*])(?=.{2,})/;
         const usernameregex = /^[a-zA-Z0-9]{3,20}$/;
 
         if(!usernameregex.test(userName.value)){

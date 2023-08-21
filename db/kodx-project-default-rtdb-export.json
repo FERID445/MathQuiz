@@ -1,0 +1,14 @@
+{
+  "users": {
+    "Cavid": {
+      "email": "cavid@gmail.com",
+      "password": "U2FsdGVkX19NR88F3yOwUsuir5zrOvSh+tOxvAmjRGU=",
+      "userName": "Cavid"
+    },
+    "Raul": {
+      "email": "raul@gmail.com",
+      "password": "U2FsdGVkX182A6Skbb9aib5wW4p+BAwtrEXVifA70W8=",
+      "userName": "Raul"
+    }
+  }
+}

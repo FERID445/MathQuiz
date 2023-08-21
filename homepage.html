@@ -49,8 +49,8 @@
           </div>
         </div>
         </div>
-                  <!-- second slider  -->
-                  <div class="mySlider">
+        <!-- second slider  -->
+        <div class="mySlider">
                     <div class="numbertext">2 / 3</div>
                   <div class="slides-left">
                     <p>10-cu sinif buraxılış riyaziyyat imtahanı</p>
@@ -66,9 +66,9 @@
                       <img id="slides-img" src="./assests/images/slides.png" />
                     </div>
                   </div>
-                  </div>
-                    <!-- third slider  -->
-                    <div class="mySlider">
+        </div>
+        <!-- third slider  -->
+        <div class="mySlider">
                       <div class="numbertext">3 / 3</div>
                     <div class="slides-left">
                       <p>11-ci sinif buraxılış riyaziyyat imtahanı</p>
@@ -84,7 +84,7 @@
                         <img id="slides-img" src="./assests/images/slides.png" />
                       </div>
                     </div>
-                    </div>
+        </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -232,6 +232,55 @@
     </div>
    </footer>
     <script src="./js/homepage.js"></script>
+
+    <script>
+      let loginBtn = document.querySelector(".btn-login");
+      let signupBtn = document.querySelector(".btn-signup");
+      let currentUser = null
+
+      // get all user data from localstorage or sessionstorage
+      function getUser(){
+        let keepLoggedIn = localStorage.getItem("keepLoggedIn");
+
+        if(keepLoggedIn == "true"){
+          currentUser = JSON.parse(localStorage.getItem("user"));
+        }
+
+        else{
+          currentUser = JSON.parse(sessionStorage.getItem("user"));
+        }
+      }
+
+      // sign out function
+      function signOut(){
+        sessionStorage.removeItem("user");
+        localStorage.removeItem("user");
+        localStorage.removeItem("keepLoggedIn");
+
+        window.location.href = "login.html";
+      }
+
+      // Page reloads when user clicks on logout button
+      window.onload = function(){
+        getUser()
+        console.log(currentUser);
+        if(currentUser == null){
+          loginBtn.innerText = "Login";
+          loginBtn.href = "./login.html";
+
+          signupBtn.innerText = "Sign up";
+          signupBtn.href = "./signup.html";
+        }
+        else{
+          loginBtn.innerText = currentUser.userName;
+          loginBtn.href = "#";
+
+          signupBtn.innerText = "Log out";
+          signupBtn.href = "javascript:signOut()";
+        }
+      }
+
+    </script>
     
   </body>
 </html>
