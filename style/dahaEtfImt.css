@@ -44,7 +44,7 @@ body{
 }
 
 .header{
-    width: calc(100%-310px);
+    width: calc(80%-310px);
     height: 103px;
     background-color: var(--container-bg);
     display: flex;
