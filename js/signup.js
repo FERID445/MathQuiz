@@ -45,8 +45,8 @@ signupButton.addEventListener('click', function () {
                         password: password,
                         date: date
                     };
-
-                    allUsers.unshift(userData);
+                    
+            allUsers.unshift(userData);
                     let allUsersJSON = JSON.stringify(allUsers);
                     localStorage.setItem('allUsers', allUsersJSON);
                     alert('Signup successful!'); // Add a success message

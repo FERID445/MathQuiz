@@ -92,10 +92,14 @@ input {
 }
 .eye-icon {
     position: absolute;
-    /* margin-left: -30px; */
-    margin-left: 260px;
-    top: 54%;
+    /*margin-left: -30px;
+    */margin-left: 260px;
+    top: 65%;
     cursor: pointer;
+    transition: 0.5s;
+}
+.eye-icon:hover{
+    transform: scale(1.2);
 }
 #forgot {
     font-size: 12px;
