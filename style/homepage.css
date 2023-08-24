@@ -57,6 +57,9 @@ header{
     list-style-type: none;
     white-space: nowrap;
 }
+.navigation a{
+    color: #2B2A2A;
+}
 .navigation li::after{
     content: '';
     position: absolute;
@@ -121,7 +124,7 @@ header{
 
 .slides {
     background-color: #675AF0;
-    height: 400px;
+    height: 420px;
     color: #FFFFFF;
     display: flex;
     justify-content: space-between;
@@ -185,7 +188,15 @@ header{
     border: 2px solid #EBB44A;
     color: #FFFFFF;
 }
-
+.slides-start a, .slides-more a{
+    color: #FFFFFF;
+}
+.slides-start a:hover{
+    color: #EBB44A;
+}
+.slides-more a:hover{
+    color: #EBB44A;
+}
 .slides-more {
     background-color: #675AF0;
     border: 2px solid #FFFFFF;
@@ -375,10 +386,22 @@ header{
     cursor: pointer;
     transition: .5s;
 }
-.article-start{
+.article-start {
     background: #675AF0;
     color: #FFFFFF;
     border: 1px solid #675AF0;
+}
+.article-start a{
+    color: #FFFFFF;
+}
+.article-more a{
+    color: #675AF0;
+}
+.article-start a:hover{
+    color: #675AF0;
+}
+.article-more a:hover{
+    color: #FFFFFF;
 }
 .article-start:hover{
     background: transparent;
@@ -523,12 +546,17 @@ main{
     transition: .2s;
 }
 
-.main-text button:hover{
+.main-text button a{
+    color: #FFF;
+}
+.main-text button:hover {
     background: transparent;
     color: #675AF0;
     border: 2px solid #675AF0;
 }
-
+.main-text a:hover {
+    color: #675AF0;
+}
 .main-img{
     position: absolute;
     top: 0;
